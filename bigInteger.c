@@ -2,7 +2,7 @@
  #include <stdio.h>
  #include <stdlib.h>
  
- struct BigInteger initializeList() 
+ struct BigInteger initialize() 
  {
       struct BigInteger list;
       list.head = NULL;
@@ -58,7 +58,7 @@
  }
  struct BigInteger add(struct BigInteger num1, struct BigInteger num2)    //function is used to add biginteger
  {
-      struct BigInteger result = initializeList();
+      struct BigInteger result = initialize();
       struct Node* node1 = num1.head;
       struct Node* node2 = num2.head;
       int c = 0;
@@ -104,7 +104,7 @@
  
  struct BigInteger sub(struct BigInteger num1, struct BigInteger num2)      //function is used to subtract biginteger
  {
-      struct BigInteger result = initializeList();
+      struct BigInteger result = initialize();
       struct Node* node1 = num1.head;
       struct Node* node2 = num2.head;
       int c = 0;
@@ -144,12 +144,12 @@
  
  struct BigInteger mul(struct BigInteger num1, struct BigInteger num2)       //function is used to multiply biginteger
  {
-      struct BigInteger result = initializeList();
+      struct BigInteger result = initialize();
       struct Node* node1 = num1.head;
       while (node1 != NULL) 
       {
           int c = 0;
-          struct BigInteger temp = initializeList();
+          struct BigInteger temp = initialize();
           struct Node* node2 = num2.head;
           while (node2 != NULL || c != 0) 
           {
@@ -172,8 +172,8 @@
  
  struct BigInteger div1(struct BigInteger num1, struct BigInteger num2)      //function is used to divide biginteger
  {
-      struct BigInteger result = initializeList();
-      struct BigInteger remainder = initializeList();
+      struct BigInteger result = initialize();
+      struct BigInteger remainder = initialize();
       struct Node* current = num1.head;
   
       while (current != NULL) 
@@ -210,7 +210,7 @@
  
  struct BigInteger mod(struct BigInteger num1, struct BigInteger num2)      //function is used to mod biginteger
  {
-      struct BigInteger remainder = initializeList();
+      struct BigInteger remainder = initialize();
       struct Node* current = num1.head;
       while (current != NULL) 
       {
