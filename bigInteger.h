@@ -13,7 +13,7 @@ struct BigInteger
     struct Node* head;
 };
 
-struct BigInteger initializeList();
+struct BigInteger initialize();
 void insertDigit(struct BigInteger list, int digit);
 void printList(struct BigInteger list);
 void freeList(struct BigInteger list);
